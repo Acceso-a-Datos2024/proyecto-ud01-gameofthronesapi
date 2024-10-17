@@ -4,6 +4,7 @@ module gameofthrones.proyecto {
 
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
+    requires com.fasterxml.jackson.annotation;
 
     opens gameofthrones.proyecto to javafx.fxml;
     exports gameofthrones.proyecto;
