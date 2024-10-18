@@ -4,10 +4,12 @@ module gameofthrones.proyecto {
 
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
-    requires com.fasterxml.jackson.annotation;
+    requires com.fasterxml.jackson.databind;
 
     opens gameofthrones.proyecto to javafx.fxml;
     exports gameofthrones.proyecto;
-    exports gameofthrones.proyecto.controller;
+    opens gameofthrones.proyecto.model to com.fasterxml.jackson.databind;
+    exports gameofthrones.proyecto.model;
     opens gameofthrones.proyecto.controller to javafx.fxml;
+    exports gameofthrones.proyecto.controller;
 }

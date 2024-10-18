@@ -8,6 +8,9 @@ public class Characters{
 	@JsonProperty("Characters")
 	private List<CharactersItem> characters;
 
+	public Characters() {
+	}
+
 	public List<CharactersItem> getCharacters(){
 		return characters;
 	}

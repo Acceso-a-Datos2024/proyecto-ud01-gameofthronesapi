@@ -28,6 +28,9 @@ public class CharactersItem{
 	@JsonProperty("family")
 	private String family;
 
+	public CharactersItem() {
+	}
+
 	public String getFirstName(){
 		return firstName;
 	}
