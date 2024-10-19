@@ -30,7 +30,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -81,9 +80,13 @@ public class HelloController {
     @FXML
     public void initialize() {
         // Configurar columnas de la tabla
-        colnombrecompleto.setCellValueFactory(new PropertyValueFactory<>("fullName"));
-        colcasa.setCellValueFactory(new PropertyValueFactory<>("family"));
-        colimagen.setCellValueFactory(new PropertyValueFactory<>("imageUrl"));
+        if (colnombrecompleto != null || colcasa != null || colimagen != null) {
+            colnombrecompleto.setCellValueFactory(new PropertyValueFactory<>("fullName"));
+            colcasa.setCellValueFactory(new PropertyValueFactory<>("family"));
+            colimagen.setCellValueFactory(new PropertyValueFactory<>("imageUrl"));
+        } else {
+            System.out.println("algun campo es null");
+        }
 
         // Cargar todos los personajes desde el archivo JSON
         cargarPersonajesDesdeJSON();
