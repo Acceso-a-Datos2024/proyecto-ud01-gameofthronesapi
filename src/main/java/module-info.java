@@ -8,6 +8,8 @@ module gameofthrones.proyecto {
 
     opens gameofthrones.proyecto to javafx.fxml;
     exports gameofthrones.proyecto;
-    exports gameofthrones.proyecto.controller;
+    opens gameofthrones.proyecto.model to com.fasterxml.jackson.databind;
+    exports gameofthrones.proyecto.model;
     opens gameofthrones.proyecto.controller to javafx.fxml;
+    exports gameofthrones.proyecto.controller;
 }
