@@ -27,8 +27,11 @@ import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class HelloController {
+public class GoTController {
 
+    @FXML
+    private Label doc_vacio;
+    
     @FXML
     private TextField nombre_doc;
     
@@ -215,6 +218,7 @@ public class HelloController {
     @FXML
     public void exportarJSON(ActionEvent actionEvent) {
          if (!nombre_doc.getText().isEmpty()){
+            doc_vacio.setVisible(false);
             ObjectMapper objectMapper = new ObjectMapper();
             try {
                 objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("src/main/docs/" + nombre_doc.getText() + ".json"), SearchHolder.getInstance().getCharacterItems());
@@ -223,7 +227,7 @@ public class HelloController {
             }
         }
         else{
-            System.out.println("Nombre de documento vacío");
+            doc_vacio.setVisible(true);
         }
     }
 }
