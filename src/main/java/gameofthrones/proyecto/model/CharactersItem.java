@@ -2,7 +2,7 @@ package gameofthrones.proyecto.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class CharactersItem{
+public class CharactersItem implements Serializable {
 
 	@JsonProperty("firstName")
 	private String firstName;
