@@ -9,6 +9,7 @@ public class Characters{
 	private List<CharactersItem> characters;
 
 	public List<CharactersItem> getCharacters(){
+
 		return characters;
 	}
 }
