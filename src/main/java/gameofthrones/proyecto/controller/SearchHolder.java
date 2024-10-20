@@ -24,7 +24,7 @@ public class SearchHolder {
     }
 
     public void setCharacterItems(ObservableList<CharactersItem> items) {
-        characterItems.addAll(items);
+        characterItems.setAll(items);
     }
 }
 
