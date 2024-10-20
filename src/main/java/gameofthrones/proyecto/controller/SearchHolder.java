@@ -6,10 +6,10 @@ import javafx.collections.ObservableList;
 
 public class SearchHolder {
     private static SearchHolder instance;
-    private ObservableList<CharactersItem> characterItems;
+    private ArrayList<CharactersItem> characterItems;
 
     private SearchHolder() {
-        characterItems = FXCollections.observableArrayList();
+        characterItems = new ArrayList<>();
     }
 
     public static SearchHolder getInstance() {
@@ -19,12 +19,13 @@ public class SearchHolder {
         return instance;
     }
 
-    public ObservableList<CharactersItem> getCharacterItems() {
+    public ArrayList<CharactersItem> getCharacterItems() {
         return characterItems;
     }
 
     public void setCharacterItems(ObservableList<CharactersItem> items) {
-        characterItems.setAll(items);
+        ArrayList<CharactersItem> characters = new ArrayList<>(items);
+        characterItems = characters;
     }
 }
 
