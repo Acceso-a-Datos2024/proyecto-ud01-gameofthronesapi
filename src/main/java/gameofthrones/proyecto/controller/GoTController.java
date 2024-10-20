@@ -239,6 +239,25 @@ public class GoTController {
     }
 
     @FXML
+    public void exportarBIN(ActionEvent actionEvent) throws IOException {
+        if (!nombre_doc.getText().isEmpty()){
+            doc_vacio.setVisible(false);
+            ObjectOutputStream objectStream = new ObjectOutputStream(new FileOutputStream("src/main/docs/" + nombre_doc.getText() + ".bin"));
+            try {
+                objectStream.writeObject(SearchHolder.getInstance().getCharacterItems());
+                objectStream.flush();
+                objectStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            vboxOk.setVisible(true);
+        }
+        else{
+            doc_vacio.setVisible(true);
+        }
+    }
+
+    @FXML
     public void clickOk(ActionEvent actionEvent) {
         vboxOk.setVisible(false);
     }
