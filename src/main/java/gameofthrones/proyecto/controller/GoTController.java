@@ -29,6 +29,12 @@ import java.util.stream.Collectors;
 
 public class GoTController {
 
+     @FXML
+    private VBox vboxOk;
+
+    @FXML
+    private Button boton_ok;
+    
     @FXML
     private Label doc_vacio;
     
@@ -225,9 +231,15 @@ public class GoTController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            vboxOk.setVisible(true);
         }
         else{
             doc_vacio.setVisible(true);
         }
+    }
+
+    @FXML
+    public void clickOk(ActionEvent actionEvent) {
+        vboxOk.setVisible(false);
     }
 }
