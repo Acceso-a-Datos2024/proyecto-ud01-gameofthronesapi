@@ -30,6 +30,9 @@ import java.util.stream.Collectors;
 public class HelloController {
 
     @FXML
+    private TextField nombre_doc;
+    
+    @FXML
     private VBox exportar_documento;
 
     @FXML
@@ -108,6 +111,7 @@ public class HelloController {
         // Mostrar solo los resultados filtrados en la tabla
         ObservableList<CharactersItem> observableList = FXCollections.observableArrayList(filteredList);
         tablabusqueda.setItems(observableList);
+        SearchHolder.getInstance().setCharacterItems(tablabusqueda.getItems());
     }
 
     private int parseId(String idText) {
@@ -205,6 +209,21 @@ public class HelloController {
             txtname.clear();
             txtpassword.clear();
             System.out.println("Usuario o contraseña incorrectos.");
+        }
+    }
+
+    @FXML
+    public void exportarJSON(ActionEvent actionEvent) {
+         if (!nombre_doc.getText().isEmpty()){
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("src/main/docs/" + nombre_doc.getText() + ".json"), SearchHolder.getInstance().getCharacterItems());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else{
+            System.out.println("Nombre de documento vacío");
         }
     }
 }
