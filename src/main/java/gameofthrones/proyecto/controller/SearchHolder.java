@@ -4,6 +4,8 @@ import gameofthrones.proyecto.model.CharactersItem;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.util.ArrayList;
+
 public class SearchHolder {
     private static SearchHolder instance;
     private ArrayList<CharactersItem> characterItems;

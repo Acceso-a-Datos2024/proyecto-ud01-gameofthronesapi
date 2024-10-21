@@ -18,7 +18,7 @@
             </Label>
             <Button fx:id="JSON" onAction="#exportarJSON" layoutX="249.0" layoutY="178.0" mnemonicParsing="false" style="-fx-background-color: whitesmoke; -fx-border-color: red;" text="JSON" />
             <Button fx:id="XML" layoutX="162.0" layoutY="178.0" mnemonicParsing="false" style="-fx-background-color: whitesmoke; -fx-border-color: red;" text="XML" />
-            <Button fx:id="BIN" layoutX="336.0" layoutY="178.0" mnemonicParsing="false" style="-fx-background-color: whitesmoke; -fx-border-color: red;" text="BIN" />
+            <Button fx:id="BIN" onAction="#exportarBIN" layoutX="336.0" layoutY="178.0" mnemonicParsing="false" style="-fx-background-color: whitesmoke; -fx-border-color: red;" text="BIN" />
             <Button fx:id="Volver" layoutX="27.0" layoutY="331.0" mnemonicParsing="false" onAction="#clickVolver" prefHeight="25.0" prefWidth="76.0" style="-fx-background-color: whitesmoke; -fx-border-color: blue;" text="Volver" />
             <TextField fx:id="nombre_doc" layoutX="249.0" layoutY="84.0" />
             <Label layoutX="116.0" layoutY="88.0" text="Nombre del documento:" />
