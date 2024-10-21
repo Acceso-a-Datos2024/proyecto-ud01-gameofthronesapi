@@ -75,4 +75,9 @@ public class CharactersItem implements Serializable {
 	public String getFamily(){
 		return family;
 	}
+
+	@Override
+	public String toString() {
+		return id +  " " + firstName + " " + lastName + " " + image + " " + imageUrl + " " + fullName + " " + title + " " + family;
+	}
 }

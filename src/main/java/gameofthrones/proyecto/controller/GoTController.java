@@ -262,8 +262,6 @@ public class GoTController {
                 // Exportar a archivo
                 File file = new File("src/main/docs/" + nombre_doc.getText() + ".xml");
                 marshaller.marshal(wrapper, file);
-
-                System.out.println("Exportación a XML completada.");
             } catch (JAXBException e) {
                 e.printStackTrace();
             }
@@ -302,6 +300,27 @@ public class GoTController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            vboxOk.setVisible(true);
+        }
+        else{
+            doc_vacio.setVisible(true);
+        }
+    }
+
+    @FXML
+    public void exportarTXT(ActionEvent actionEvent) throws IOException {
+        if (!nombre_doc.getText().isEmpty()){
+            BufferedWriter escritor = new BufferedWriter(new FileWriter("src/main/docs/" + nombre_doc.getText() + ".txt",false));
+            try {
+                for(CharactersItem character : SearchHolder.getInstance().getCharacterItems()) {
+                    escritor.write(character.toString());
+                    escritor.newLine();
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            escritor.flush();
+            escritor.close();
             vboxOk.setVisible(true);
         }
         else{

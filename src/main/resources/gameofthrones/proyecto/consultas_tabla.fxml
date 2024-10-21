@@ -9,18 +9,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox fx:id="consultas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/" fx:controller="gameofthrones.proyecto.controller.GoTController">
+<VBox fx:id="consultas" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameofthrones.proyecto.controller.GoTController">
     <children>
-        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="640.0" style="-fx-background-color: gray;" VBox.vgrow="ALWAYS">
             <children>
-                <Text layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+                <Text fill="WHITE" layoutX="20.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
                 <TextField fx:id="buscarid" layoutX="40.0" layoutY="45.0" style="-fx-background-color: f9ffb7;" />
                 <TextField fx:id="buscarnombre" layoutX="255.0" layoutY="45.0" style="-fx-background-color: f9ffb7;" />
-                <Text layoutX="205.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
+                <Text fill="WHITE" layoutX="205.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
                 <TextField fx:id="buscarapellido" layoutX="470.0" layoutY="45.0" style="-fx-background-color: f9ffb7;" />
-                <Text layoutX="420.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido:" />
-                <Button fx:id="botonexportartabla" layoutX="220.0" layoutY="460.0" mnemonicParsing="false" onAction="#abrirExportarDocumento" text="Exportar Tabla" />
-                <Button fx:id="botonsalir" layoutX="350.0" layoutY="460.0" mnemonicParsing="false" onAction="#salir" text="Salir" />
+                <Text fill="WHITE" layoutX="420.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido:" />
+                <Button fx:id="botonexportartabla" layoutX="220.0" layoutY="460.0" mnemonicParsing="false" onAction="#abrirExportarDocumento" style="-fx-background-color: red; -fx-border-color: white;" text="Exportar Tabla" textFill="WHITE" />
+                <Button fx:id="botonsalir" layoutX="350.0" layoutY="460.0" mnemonicParsing="false" onAction="#salir" style="-fx-background-color: red; -fx-border-color: white;" text="Salir" textFill="WHITE" />
                 <TableView fx:id="tablabusqueda" layoutX="20.0" layoutY="115.0" prefHeight="340.0" prefWidth="600.0">
                     <columns>
                         <TableColumn fx:id="colnombrecompleto" prefWidth="250.0" text="Nombre Completo" />
@@ -28,12 +28,12 @@
                         <TableColumn fx:id="coltitulo" prefWidth="200.0" text="Título" />
                     </columns>
                 </TableView>
-                <Text layoutX="65.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indica el cmapo o campos por los que realizar la búsqueda">
+                <Text fill="WHITE" layoutX="65.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indica el campo o campos por los que realizar la búsqueda">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Text>
-                <Button fx:id="botonbuscar" layoutX="290.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#busqueda" text="Buscar" />
+                <Button fx:id="botonbuscar" layoutX="290.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#busqueda" style="-fx-background-color: red; -fx-border-color: white;" text="Buscar" textFill="WHITE" />
             </children>
         </AnchorPane>
     </children>
