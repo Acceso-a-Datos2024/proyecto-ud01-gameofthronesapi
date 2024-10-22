@@ -10,6 +10,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -31,6 +33,9 @@ import jakarta.xml.bind.Marshaller;
 
 
 public class GoTController {
+    @FXML
+    private ImageView imagenCharacter;
+
     @FXML
     private VBox vboxOk;
 
@@ -333,5 +338,14 @@ public class GoTController {
         vboxOk.setVisible(false);
     }
 
+    @FXML
+    public void onTableClicked(MouseEvent event) {
+        if (event.getClickCount() == 2) {
+            CharactersItem item = tablabusqueda.getSelectionModel().getSelectedItem();
+            Image imagen = new Image(item.getImageUrl());
+            imagenCharacter.setImage(imagen);
+            imagenCharacter.setVisible(true);
+        }
+    }
 
 }
