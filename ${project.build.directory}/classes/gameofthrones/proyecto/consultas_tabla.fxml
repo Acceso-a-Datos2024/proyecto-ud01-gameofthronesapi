@@ -20,9 +20,9 @@
                 <Text fill="WHITE" layoutX="205.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
                 <TextField fx:id="buscarapellido" layoutX="470.0" layoutY="45.0" style="-fx-background-color: f9ffb7;" />
                 <Text fill="WHITE" layoutX="420.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido:" />
-                <Button fx:id="botonexportartabla" layoutX="220.0" layoutY="460.0" mnemonicParsing="false" onAction="#abrirExportarDocumento" style="-fx-background-color: red; -fx-border-color: white;" text="Exportar Tabla" textFill="WHITE" />
+                <Button fx:id="botonexportartabla" layoutX="236.0" layoutY="460.0" mnemonicParsing="false" onAction="#abrirExportarDocumento" style="-fx-background-color: red; -fx-border-color: white;" text="Exportar Tabla" textFill="WHITE" />
                 <Button fx:id="botonsalir" layoutX="350.0" layoutY="460.0" mnemonicParsing="false" onAction="#salir" style="-fx-background-color: red; -fx-border-color: white;" text="Salir" textFill="WHITE" />
-                <TableView fx:id="tablabusqueda" layoutX="20.0" layoutY="115.0" onMouseClicked="#onTableClicked" prefHeight="340.0" prefWidth="600.0">
+                <TableView fx:id="tablabusqueda" layoutX="20.0" layoutY="115.0" onMouseClicked="#onTableClicked" prefHeight="205.0" prefWidth="600.0">
                     <columns>
                         <TableColumn fx:id="colnombrecompleto" prefWidth="250.0" text="Nombre Completo" />
                         <TableColumn fx:id="colcasa" prefWidth="150.0" text="Casa" />
@@ -35,7 +35,7 @@
                     </font>
                 </Text>
                 <Button fx:id="botonbuscar" layoutX="290.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#busqueda" style="-fx-background-color: red; -fx-border-color: white;" text="Buscar" textFill="WHITE" />
-            <ImageView fx:id="imagenCharacter" fitHeight="135.0" fitWidth="161.0" layoutX="263.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imagenCharacter" fitHeight="135.0" fitWidth="229.0" layoutX="215.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true" />
             </children>
         </AnchorPane>
     </children>
