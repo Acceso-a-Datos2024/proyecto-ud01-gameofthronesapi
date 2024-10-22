@@ -1,17 +1,17 @@
-#Introducción
+# Introducción
 
-#Manual  técnico para desarrolladores
+# Manual  técnico para desarrolladores
 
-#Manual de usuario con juego de pruebas
+# Manual de usuario con juego de pruebas
 
-#Reparto de tareas
+# Reparto de tareas
 
-#Extras realizados
+# Extras realizados
 
-#Propuestas de mejora
+# Propuestas de mejora
 
-#Conclusiones
+# Conclusiones
     
-###Dedicación temporal
+### Dedicación temporal
 
-###Cualificación estimada
+### Cualificación estimada
