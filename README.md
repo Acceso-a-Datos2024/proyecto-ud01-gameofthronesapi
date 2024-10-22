@@ -139,6 +139,35 @@ Miguel ha implementado las funcionalidades de exportación a binario, texto y js
 
 # Extras realizados
 
+**Login**
+
+A mayores del proceso y el código explicado en el *Manual técnico para desarrolladores* , hemos diseñado una pantalla de Login en la que introduciremos usuario y contraseña almacenados e un archivo .properties.
+
+**Login ocultando pass**
+
+![Loginpass](res/imagenes/Loginbien.png)
+
+En caso de no introducir bien algún parámetro nos mostrará un mensaje de error por pantalla. 
+
+**Login error**
+
+![ErrorLogin](res/imagenes/Errorlogin.png)
+
+El código usado para implementar esta función ha sido el siguiente. 
+
+**Método Login**
+
+![MetodoLogin](res/imagenes/Login.png)
+
+**Método de Verificación**
+
+![Verificacion](res/imagenes/Verificacion.png)
+
+**Uso Offline**
+
+Como ya inficamos también en el *Manual técnico para desarrolladores*, nuestra aplicación realiza las consultas contra un archivo JSON dentro de la propia aplicación , por lo que no requiere de conexión a internet para realizar 
+las consultas. (Leer creación del método "Initialize")
+
 # Propuestas de mejora
 
 Entre las mejoras que se podrían implementar estan:
