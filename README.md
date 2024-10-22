@@ -177,7 +177,9 @@ Entre las mejoras que se podrían implementar estan:
 - Encriptar los datos del fichero properties para el log in.
 
 # Conclusiones
-    
+
+En un principio el proyecto fue avanzando lentamente debido a la falta de conocimiento de JavaFX de los integrantes del grupo, sin embargo al entender como funciona se comezó a trabajar de manera más agil permitiendo alcanzar los requerimientos del proyecto dentro del plazo de entrega.
+
 ### Dedicación temporal
 
 A este proyecto cada uno de los integrantes le ha dedicado un total de 20 horas divididos entre los distintos días de la semana de la siguiente manera.
