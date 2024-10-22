@@ -180,11 +180,13 @@ Entre las mejoras que se podrían implementar estan:
 
 En un principio el proyecto fue avanzando lentamente debido a la falta de conocimiento de JavaFX de los integrantes del grupo, sin embargo al entender como funciona se comezó a trabajar de manera más agil permitiendo alcanzar los requerimientos del proyecto dentro del plazo de entrega.
 
-### Dedicación temporal
+# Dedicación temporal
 
 A este proyecto cada uno de los integrantes le ha dedicado un total de 20 horas divididos entre los distintos días de la semana de la siguiente manera.
 
 ![ Imagen horas trabajo ](res/imagenes/Horas_trabajo.png)
 
 
-### Cualificación estimada
+# Cualificación estimada
+
+En vista de los criterios de evaluación del proyecto, los puntos realizados por el grupo y los extras añadidos, consideramos que la puntuación del proyecto sobre 100% sería entre un 80% y un 90%.
