@@ -55,6 +55,12 @@ Por último si se desea seguir realizando búsquedas se pulsará el botón *Volv
 
 # Reparto de tareas
 
+Se han repartido las tareas en función del tiempo que se le ha dedicado a cada una de forma que este fuera equitativo:
+
+Jorge ha implementado las funcionalidades de búsqueda por los distintos campos, la exportación de datos a XML, la verificación de usuarios en el login, botones de cambio de pantalla y mensajes emergentes y ha realizado el modelo de las pantallas de login y búsquedas.
+
+Miguel ha implementado las funcionalidades de exportación a binario, texto y json, la interacción con la tabla para recibir la imagen de cada personaje, botones de cambio de pantalla, ventanas y mensajes emergentes. Ha realizado el modelo de la pantalla de exportación de documentos y ha añadido estilos a las distintas pantallas.
+
 # Extras realizados
 
 # Propuestas de mejora
