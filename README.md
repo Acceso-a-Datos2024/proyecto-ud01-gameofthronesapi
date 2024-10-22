@@ -141,6 +141,12 @@ Miguel ha implementado las funcionalidades de exportación a binario, texto y js
 
 # Propuestas de mejora
 
+Entre las mejoras que se podrían implementar estan:
+
+- Añadir un mensaje que indique que no se han encontrado coincidencias al realizar la búsqueda.
+- Actualmente los datos se extraen de un json obtenido de la API y que se ha guardado en la carpeta *resources*, la mejora sería implementar que la búsqueda se realizara directamente contra la API.
+- Encriptar los datos del fichero properties para el log in.
+
 # Conclusiones
     
 ### Dedicación temporal
