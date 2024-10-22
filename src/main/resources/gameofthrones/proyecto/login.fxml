@@ -18,6 +18,7 @@
                 <Text fill="WHITE" layoutX="240.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
                 <TextField fx:id="txtname" layoutX="308.0" layoutY="156.0" prefHeight="25.0" prefWidth="98.0" />
                 <PasswordField fx:id="txtpassword" layoutX="308.0" layoutY="200.0" prefHeight="25.0" prefWidth="98.0" />
+                <Label fx:id="datos_incorrectos" layoutX="217.0" layoutY="230.0" text="El usuario o contraseña son incorrectos" textFill="#ef0000" visible="false" />
                 <Text fill="WHITE" layoutX="113.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game of Thrones API">
                     <font>
                         <Font name="Bodoni MT" size="45.0" />
