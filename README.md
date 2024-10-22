@@ -29,11 +29,29 @@ Búsqueda por apellido:
 
 Además también se podrá buscar por diferentes campos al mismo tiempo.
 
-![ Imagen varios ](res/imagenes/Bsuquedavarioscampos.png)
+![ Imagen varios ](res/imagenes/Bsuqedavarioscampos.png)
 
 En caso de que ningún dato coincida con la búsqueda realizada la tabla aparecerá vacía.
 
-![ Imagen errbus ](res/imagenes/Bsuquedaerronea.png)
+![ Imagen errbus ](res/imagenes/Bsuqedaerronea.png)
+
+Una vez realizada la búsqueda se podrán seleccionar los personajes de la tabla para que muestre una foto del personaje seleccionado.
+
+![ Imagen ned ](res/imagenes/NedFoto.png)
+
+![ Imagen rob ](res/imagenes/RobFoto.png)
+
+Cuando se haya terminado la búsqueda se puede pulsar el botón *Exportar Tabla* para ir a la siguiente pantalla, donde se podrá elegir el nombre y tipo de documento al que se desea exportar entre los disponibles (.txt, .bin, .json, .xml).
+
+En caso de que no se haya proporcionado un nombre de documento aparecerá un mensaje en pantalla indicándolo y no se realizará la exportación.
+
+![ Imagen errexport ](res/imagenes/Errorexportar.png)
+
+Cuando la exportación se realice correctamente aparecerá esta ventana emergente confirmando la exportación. Los documentos se guardarán en la carpeta *docs*.
+
+![ Imagen exportcorrecto ](res/imagenes/ExportarCorrecto.png)
+
+Por último si se desea seguir realizando búsquedas se pulsará el botón *Volver* para ir a la pantalla de búsquedas.
 
 # Reparto de tareas
 
