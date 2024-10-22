@@ -276,74 +276,125 @@ public class GoTController {
             doc_vacio.setVisible(true);
         }
     }
+
+    /**
+     * Este método sirve para exportar a .json los datos obtenidos en la búsqueda a partir de pulsar el botón JSON
+     * @param actionEvent
+     */
     @FXML
     public void exportarJSON(ActionEvent actionEvent) {
+        // Verifica si el campo de texto 'nombre_doc' no está vacío
         if (!nombre_doc.getText().isEmpty()){
+            // Si no está vacío, oculta el mensaje de documento vacío
             doc_vacio.setVisible(false);
+            // Crea una instancia de ObjectMapper para manejar la conversión a JSON
             ObjectMapper objectMapper = new ObjectMapper();
             try {
+                //Escribe los datos obtenidos de la búsqueda y los escribe en un documento .json cuyo nombre recibe del campo de texto
                 objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File("src/main/docs/" + nombre_doc.getText() + ".json"), SearchHolder.getInstance().getCharacterItems());
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            //Hace visible el vboxOk que muestra un mensaje indicando que la exportación se ha realizado
             vboxOk.setVisible(true);
         }
         else{
+            // Si el campo nombre_doc está vacío muestra el texto doc_vacío
             doc_vacio.setVisible(true);
         }
     }
 
+    /**
+     * Este método sirve para exportar a binario los datos obtenidos en la búsqueda a partir de pulsar el botón BIN
+     * @param actionEvent
+     * @throws IOException
+     */
     @FXML
     public void exportarBIN(ActionEvent actionEvent) throws IOException {
+        // Verifica si el campo de texto 'nombre_doc' no está vacío
         if (!nombre_doc.getText().isEmpty()){
+            // Si no está vacío, oculta el mensaje de documento vacío
             doc_vacio.setVisible(false);
+            // Crea una instancia de ObjectOutputStream para manejar la conversión a binario
             ObjectOutputStream objectStream = new ObjectOutputStream(new FileOutputStream("src/main/docs/" + nombre_doc.getText() + ".bin"));
             try {
+                // Escribe los datos de los personajes en el archivo binario
                 objectStream.writeObject(SearchHolder.getInstance().getCharacterItems());
+                // Asegura que todos los datos se escriban en el archivo
                 objectStream.flush();
+                // Cierra el stream para liberar recursos
                 objectStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            //Hace visible el vboxOk que muestra un mensaje indicando que la exportación se ha realizado
             vboxOk.setVisible(true);
         }
         else{
+            // Si el campo nombre_doc está vacío muestra el texto doc_vacío
             doc_vacio.setVisible(true);
         }
     }
 
+    /**
+     * Este método sirve para exportar a .txt los datos obtenidos en la búsqueda a partir de pulsar el botón TXT
+     * @param actionEvent
+     * @throws IOException
+     */
     @FXML
     public void exportarTXT(ActionEvent actionEvent) throws IOException {
         if (!nombre_doc.getText().isEmpty()){
+            // Crea un BufferedWriter para escribir en un archivo de texto
+            // con el segundo parametro "false" para sobreescribir el archivo si ya existe uno con el mismo nombre
             BufferedWriter escritor = new BufferedWriter(new FileWriter("src/main/docs/" + nombre_doc.getText() + ".txt",false));
             try {
+                // Itera sobre la lista de personajes obtenida del singleton SearchHolder, en este caso "characterItems"
                 for(CharactersItem character : SearchHolder.getInstance().getCharacterItems()) {
+                    //Escribe en el documento el objeto CharacterItem usando su método toString
                     escritor.write(character.toString());
+                    //Añade una línea nueva después de añadir un personaje
                     escritor.newLine();
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+            // Asegura que todos los datos se escriban en el archivo
             escritor.flush();
+            // Cierra el escritor para liberar recursos
             escritor.close();
+            //Muestra la ventana que indica que la exportación se ha realizado
             vboxOk.setVisible(true);
         }
         else{
+            // Si el campo nombre_doc está vacío muestra el texto doc_vacío
             doc_vacio.setVisible(true);
         }
     }
 
+    /**
+     * Este método sirve para hacer invisible la ventana vboxOk al pulsaar el boton_ok
+     * @param actionEvent
+     */
     @FXML
     public void clickOk(ActionEvent actionEvent) {
         vboxOk.setVisible(false);
     }
 
+    /**
+     * Este método sirve para mostrar la imagen del personaje de la tabla seleccionado
+     * @param event
+     */
     @FXML
     public void onTableClicked(MouseEvent event) {
+        // Verifica si se ha realizado un doble clic en la tabla
         if (event.getClickCount() == 2) {
+            // Obtiene el elemento seleccionado de la tabla
             CharactersItem item = tablabusqueda.getSelectionModel().getSelectedItem();
+            //Crea una imagen a partir de la url a la imagen del personaje
             Image imagen = new Image(item.getImageUrl());
+            //Establece la imagen del personaje en el ImageView
             imagenCharacter.setImage(imagen);
+            //Hace visible la imagen
             imagenCharacter.setVisible(true);
         }
     }

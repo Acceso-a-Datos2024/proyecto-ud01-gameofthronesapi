@@ -1,5 +1,9 @@
+gameofthrones\proyecto\model\UsuariosItem.class
 gameofthrones\proyecto\model\CharactersItem.class
-gameofthrones\proyecto\controller\HelloController.class
-module-info.class
+gameofthrones\proyecto\controller\GoTController.class
+gameofthrones\proyecto\controller\GoTController$1.class
 gameofthrones\proyecto\model\Characters.class
+gameofthrones\proyecto\model\Response.class
+module-info.class
+gameofthrones\proyecto\controller\SearchHolder.class
 gameofthrones\proyecto\HelloApplication.class
