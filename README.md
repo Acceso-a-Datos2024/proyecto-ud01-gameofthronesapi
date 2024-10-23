@@ -39,12 +39,12 @@ Comenzaremos declarando el método "initialize()" que se ejecutará al cargar la
 "cargarPersonajesDesdeJSON" el cual básicamente nos cargará la lista de personajes desde el archivo JSON que generamos con la API. Así podremos realizar consultas en nuestra propia aplicación sin depender de una conexión a internet.
 Y si en un futuro se realizase actualziaciones en la API simplemente tendríamos que reflejarlas en nuestro JSON. 
 
-![Componentes](res/imagenes/Componentes.png)
+![ initialize ](res/imagenes/Initialize_cargarpersonajes.png)
 
 Una vez tengamos esto declararemos el método que nos permita realizar búsquedas, comentado en la siguiente imagen. A mayores hemos incluido otro pequeño método para pasar la id que introduce el usuario (String) a un int , que es como 
 figura en la clase de los Personajes, así podremos realizar la búsqueda por ID sin probelmas.
 
-![Componentes](res/imagenes/Busqueda_parseid.png)
+![ parseId ](res/imagenes/Busqueda_parseid.png)
 
 Con esto ya tendríamos nuestra ventana de búsquedas lista para realizar consultas. Ahora declararemos el método "abrirExportarDocumento" que nos llevará a la ventana donde indicaremos que tipo de documento queremos exportar y que nombre
 queremos darle.
